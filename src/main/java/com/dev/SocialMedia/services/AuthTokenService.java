@@ -1,6 +1,6 @@
 package com.dev.SocialMedia.services;
 
-import com.dev.SocialMedia.Repository.AuthTokenRepository;
+import com.dev.SocialMedia.repositories.AuthTokenRepository;
 import com.dev.SocialMedia.models.AuthToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.dev.SocialMedia.Repository;
+package com.dev.SocialMedia.repositories;
 
 import com.dev.SocialMedia.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;

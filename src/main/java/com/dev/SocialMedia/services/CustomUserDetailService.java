@@ -1,6 +1,6 @@
 package com.dev.SocialMedia.services;
 
-import com.dev.SocialMedia.Repository.UserRepo;
+import com.dev.SocialMedia.repositories.UserRepo;
 import com.dev.SocialMedia.models.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

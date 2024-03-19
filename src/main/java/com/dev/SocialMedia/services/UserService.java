@@ -1,6 +1,6 @@
 package com.dev.SocialMedia.services;
 
-import com.dev.SocialMedia.Repository.UserRepo;
+import com.dev.SocialMedia.repositories.UserRepo;
 import com.dev.SocialMedia.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,7 +1,7 @@
 package com.dev.SocialMedia.services;
 
 
-import com.dev.SocialMedia.Repository.PostRepository;
+import com.dev.SocialMedia.repositories.PostRepository;
 import com.dev.SocialMedia.models.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
