@@ -6,6 +6,7 @@ import com.dev.SocialMedia.models.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,9 +23,18 @@ public class PostController {
     }
 
     @GetMapping("/getAllPost")
-    public ResponseEntity<List<Post>> getAllPosts() {
+   /* public ResponseEntity<List<Post>> getAllPosts() {
         List<Post> posts = postService.getAllPosts();
         return new ResponseEntity<>(posts, HttpStatus.OK);
+    }*/
+    @Transactional
+    public List<Post> getAllPosts() {
+        List<Post> posts = postService.getAllPosts(); // Fetching all posts
+        // Accessing user for each post to initialize the lazy-loading
+        posts.forEach(post -> {
+            post.getUser().getId(); // Accessing a property to initialize the proxy
+        });
+        return posts; // Returning the list of posts
     }
 
     @GetMapping("/getAllPost/{id}")

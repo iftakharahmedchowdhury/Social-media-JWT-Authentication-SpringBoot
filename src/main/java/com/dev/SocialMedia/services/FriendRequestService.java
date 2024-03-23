@@ -39,4 +39,9 @@ public class FriendRequestService {
     public void deleteFriendRequest(Long id) {
         friendRequestRepository.deleteById(id);
     }
+
+
+    public List<FriendRequest> getFriendRequestsByReceiverId(Long receiverId) {
+        return friendRequestRepository.findByReceiverId(receiverId);
+    }
 }

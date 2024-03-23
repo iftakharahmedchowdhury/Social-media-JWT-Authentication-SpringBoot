@@ -49,4 +49,10 @@ public class FriendRequestController {
         friendRequestService.deleteFriendRequest(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping("/received/{receiverId}")
+    public ResponseEntity<List<FriendRequest>> getFriendRequestsByReceiverId(@PathVariable Long receiverId) {
+        List<FriendRequest> friendRequests = friendRequestService.getFriendRequestsByReceiverId(receiverId);
+        return new ResponseEntity<>(friendRequests, HttpStatus.OK);
+    }
 }
